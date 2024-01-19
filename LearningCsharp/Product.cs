@@ -2,34 +2,49 @@ namespace MyApp;
 
 public class Product
 {
-    public string Name;
-    public double Price;
-    public int Quantidy;
+    private readonly string _name;
+    private int _quantidy;
+    public double Price { get; private set; }
 
     public Product(string name, double price)
     {
-        Name = name;
         Price = price;
+        _name = name;
+    }
+
+
+    public string GetName()
+    {
+        return _name;
     }
 
     public void AddProduct(int qtd)
     {
-        Quantidy += qtd;
+        SetQuantidy(qtd);
+    }
+
+    public void SetQuantidy(int qtd)
+    {
+        _quantidy = qtd;
+    }
+
+    public int GetQuantidy()
+    {
+        return _quantidy;
     }
 
     public void RemoveProduct(int qtd)
     {
-        Quantidy -= qtd;
+        _quantidy -= qtd;
     }
 
     public double TotalValueStorate()
     {
-        return Quantidy * Price;
+        return _quantidy * Price;
     }
 
     public void Info()
-
     {
-        Console.WriteLine($"Product info: {Name}, ${Price}, {Quantidy} qtds, Total: ${TotalValueStorate()}");
+        Console.WriteLine($"Product info: {_name}, ${Price}, {_quantidy} qtds, Total: ${TotalValueStorate()}");
     }
 }
