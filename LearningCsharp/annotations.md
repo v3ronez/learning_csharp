@@ -1,6 +1,7 @@
 ## DateTime
 
-Representa um INSTANTE <br>
+Representa um INSTANTE
+
 É um tipo valor (struct)
 
 ### Boas Práticas trabalhando com hora
@@ -12,5 +13,6 @@ Representa um INSTANTE <br>
 
 ## TimeSpan
 
-Requesenta uma DURAÇÃO (um intervalo de tempo) <br>
+Requesenta uma DURAÇÃO (um intervalo de tempo)
+
 É um tipo valor (struct)
